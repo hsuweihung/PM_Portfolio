@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8754TWSEBE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8754TWSEBE');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerDirector Subtitle Room Revamp — William Hsu | PM Case Study</title>
+  <meta name="description" content="Case study: William Hsu led the end-to-end revamp of PowerDirector Subtitle Room — modernizing a core feature with strong STT revenue through UX restructuring and iteration.">
+  <meta name="author" content="William Hsu">
+  <link rel="canonical" href="https://williamhsu.design/PowerDirector.html">
+  <meta property="og:title" content="PowerDirector Subtitle Room Revamp — William Hsu">
+  <meta property="og:description" content="PM Case Study: Revamping PowerDirector's core subtitle editing experience — from PRD to launch in 3 months.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/case-study.css">
+  <link rel="icon" href="./image/me.png" type="image/x-icon">
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <nav id="nav" role="navigation" aria-label="Primary navigation">
+    <div class="pill">
+      <a href="./index.html" class="pill-logo" aria-label="William Hsu — home">
+        <img src="./image/me.png" alt="William Hsu" class="pill-avatar">
+        <span class="pill-name">William Hsu</span>
+      </a>
+      <div class="pill-divider" aria-hidden="true"></div>
+      <div class="pill-links">
+        <a href="./index.html" class="pill-link pill-link--active">Work</a>
+        <a href="./about.html" class="pill-link">About</a>
+        <a href="./williamHsu_resume.pdf" target="_blank" rel="noopener" class="pill-link">Resume</a>
+        <a href="mailto:william19970923@gmail.com" class="pill-cta">Contact</a>
+      </div>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mob-menu" id="mobMenu" hidden>
+    <button type="button" class="mob-close" id="mobClose" aria-label="Close menu">
+      <span></span><span></span>
+    </button>
+    <nav class="mob-nav" aria-label="Mobile navigation">
+      <a href="./index.html" class="mob-link" data-num="01">Work</a>
+      <a href="./about.html" class="mob-link" data-num="02">About</a>
+      <a href="./williamHsu_resume.pdf" target="_blank" rel="noopener" class="mob-link" data-num="03">Resume</a>
+      <a href="mailto:william19970923@gmail.com" class="mob-link" data-num="04">Contact</a>
+    </nav>
+    <div class="mob-footer">
+      <span>William Hsu</span>
+      <a href="https://www.linkedin.com/in/williamhsuu/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <h1 class="sr-only">PowerDirector Subtitle Room Revamp — PM Case Study</h1>
+
+    <!-- Hero -->
+    <section class="cs-hero">
+      <div class="cs-hero-inner">
+        <div class="cs-hero-meta">
+          <span class="cs-tag">Multimedia Software</span>
+          <span class="cs-tag">UX Design</span>
+          <span class="cs-tag">Revamp</span>
+        </div>
+        <h2 class="cs-hero-title">PowerDirector<br>Subtitle Room</h2>
+        <p class="cs-hero-sub">Modernizing a core editing feature through UX restructuring and iteration</p>
+      </div>
+      <div class="cs-hero-img">
+        <img src="./image/PDR/Banner.png" alt="PowerDirector Subtitle Room interface" loading="eager">
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="cs-overview">
+      <div class="cs-overview-inner">
+        <div class="cs-overview-item">
+          <span class="cs-overview-label">Timeline</span>
+          <span class="cs-overview-val">Jul 2025 – Sep 2025</span>
+        </div>
+        <div class="cs-overview-item">
+          <span class="cs-overview-label">My Role</span>
+          <span class="cs-overview-val">Product Manager — PRD, RD/Design alignment, end-to-end delivery</span>
+        </div>
+        <div class="cs-overview-item">
+          <span class="cs-overview-label">Team</span>
+          <span class="cs-overview-val">3 engineers · 3 months · spec to launch</span>
+        </div>
+        <div class="cs-overview-item cs-overview-item--accent">
+          <span class="cs-overview-label">Outcome</span>
+          <span class="cs-overview-val">Shipped Sep 2025 · iterated post-launch after surfacing edge cases from user feedback</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-body">
+
+      <!-- Background -->
+      <section class="cs-section">
+        <h2 class="cs-section-title">Background</h2>
+        <p>Subtitles are one of the most-used features in video editing — and Speech-to-Text had consistently strong revenue, indicating an active and growing user base. However, the existing Subtitle Room had accumulated significant UX debt: the toolbar exposed every function at once without distinguishing primary from secondary actions — making it harder for users to find what they needed quickly — and editing subtitle properties required opening a separate dialog through a T icon — an interaction pattern that was outdated and added unnecessary friction.</p>
+        <p>The revamp was initiated to modernize the experience and better serve users who depend on subtitles daily.</p>
+      </section>
+
+      <!-- My Role -->
+      <section class="cs-section">
+        <h2 class="cs-section-title">My Role</h2>
+        <p>I owned the full execution — from UX trade-offs and PRD to RD/Design alignment and launch in 3 months. Key decisions included restructuring the toolbar IA and defining the panel hierarchy to balance discoverability and editing efficiency.</p>
+      </section>
+
+      <!-- Design Decisions -->
+      <section class="cs-section">
+        <h2 class="cs-section-title">Design Decisions</h2>
+
+        <!-- Strategy 1 -->
+        <div class="cs-feature">
+          <div class="cs-feature-img">
+            <img src="./image/PDR/Landing.png" alt="Toolbar redesign — clearer navigation structure" loading="lazy">
+          </div>
+          <div class="cs-feature-body">
+            <h3>Toolbar Redesign for Clearer Navigation</h3>
+            <p>The original toolbar exposed every function at once — there was no distinction between primary and secondary actions, making the interface feel cluttered and overwhelming. The redesign <mark>focuses the toolbar on core global actions</mark> while moving secondary controls to the side panel. Merge and Split were combined into a single function to further reduce visual noise.</p>
+          </div>
+        </div>
+
+        <!-- Strategy 2 -->
+        <div class="cs-feature cs-feature--flip">
+          <div class="cs-feature-img">
+            <img src="./image/PDR/Properties.png" alt="Subtitle list and properties panel" loading="lazy">
+          </div>
+          <div class="cs-feature-body">
+            <h3>Subtitle List and Properties — Always Visible</h3>
+            <p>Previously, editing subtitle properties required clicking a T icon to open a separate dialog — an extra step that interrupted the editing flow. The new design <mark>splits subtitle management into two persistent panels</mark>: a Subtitle List for overview and selection, and a Properties panel for detailed editing. Both are visible in the side panel without needing to open any dialogs.</p>
+          </div>
+        </div>
+
+        <!-- Strategy 3 -->
+        <div class="cs-feature">
+          <div class="cs-feature-img">
+            <img src="./image/PDR/Findandreplace.png" alt="Search and find & replace separated" loading="lazy">
+          </div>
+          <div class="cs-feature-body">
+            <h3>Search and Replace — Separated for Clarity</h3>
+            <p>In the previous design, there was no clear visual cue indicating that users needed to click a Find &amp; Replace button after entering the search bar. Expanding the replace field also caused unnecessary visual disruption. To improve clarity, <mark>Search and Find &amp; Replace were separated into two distinct functions</mark>, making each interaction predictable and easier to understand.</p>
+          </div>
+        </div>
+
+        <!-- Strategy 4 — Add Subtitle iteration story -->
+        <div class="cs-feature cs-feature--flip">
+          <div class="cs-feature-img cs-feature-img--placeholder">
+            <div class="cs-placeholder">
+              <span>Add Subtitle</span>
+            </div>
+          </div>
+          <div class="cs-feature-body">
+            <h3>Add Subtitle — A Data-Driven Decision That Needed Revision</h3>
+            <p>Originally, subtitles could only be added at the playhead position. STT usage data showed that most users relied on AI-generated transcripts rather than typing manually — so in the initial revamp, we shipped without the playhead option, keeping only the add-after-selected flow — which better matched how creators type subtitles line by line.</p>
+            <p>After launch, we received complaints from users who still needed to add at the playhead. This validated that <mark>data can guide decisions, but edge cases require qualitative feedback to surface</mark>. We iterated quickly and restored the playhead option — the final design supports both.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Self-reflection -->
+      <section class="cs-section">
+        <h2 class="cs-section-title">Self-Reflection</h2>
+        <div class="cs-reflection">
+          <div class="cs-reflection-item">
+            <span class="cs-reflection-num">01</span>
+            <div>
+              <h3>Designing within long-term technical constraints</h3>
+              <p>Many UX improvements were possible in theory, but the product's long-standing technical debt limited how much could be changed at a foundational level. Instead of pushing ideal but unrealistic solutions, I worked closely with R&amp;D to evaluate feasibility and focus on changes that delivered meaningful UX impact within practical constraints.</p>
+            </div>
+          </div>
+          <div class="cs-reflection-item">
+            <span class="cs-reflection-num">02</span>
+            <div>
+              <h3>When data doesn't tell the full story</h3>
+              <p>The data clearly showed that most users relied on AI Speech-to-Text, so we assumed manual subtitle edits at the playhead would be rare. Based on that assumption, we removed the control in the first release. After launch, however, we received unexpected complaints — which highlighted that data can guide decisions, but still needs validation to capture important edge cases.</p>
+            </div>
+          </div>
+          <div class="cs-reflection-item">
+            <span class="cs-reflection-num">03</span>
+            <div>
+              <h3>Iteration leads to better design decisions</h3>
+              <p>The right layout wasn't obvious from the start. We explored several layouts — including tabs and edit-triggered panels — but they made important settings less visible. After multiple iterations and discussions with the team, we moved core subtitle list and properties controls to the left navigation. While this required a new layout in the app, it resulted in a more intuitive and discoverable experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Project navigation -->
+    <div class="cs-nav">
+      <a href="./Podcast Studio.html" class="cs-nav-link">← Podcast Studio</a>
+      <a href="./yahoo_app.html" class="cs-nav-link">Yahoo App →</a>
+    </div>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <a href="./index.html" class="footer-back">← Back to all work</a>
+      <nav aria-label="Footer links">
+        <a href="https://www.linkedin.com/in/williamhsuu/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button type="button" id="btt" aria-label="Back to top">↑</button>
+  <script src="./JS/main.js"></script>
+</body>
+</html>

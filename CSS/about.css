@@ -61,7 +61,7 @@
   border-bottom: 1px solid var(--border);
 }
 .a-section--off { background: var(--off); }
-.a-section-inner { max-width: var(--max); margin: 0 auto; }
+.a-section-inner { max-width: 720px; margin: 0 auto; }
 .a-section-title {
   font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 600; letter-spacing: -.02em; color: var(--ink);
@@ -92,6 +92,7 @@
 /* ── Education ── */
 .a-edu-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  max-width: 720px; margin: 0 auto;
 }
 .a-edu-card {
   background: var(--white); border: 1px solid var(--border);
