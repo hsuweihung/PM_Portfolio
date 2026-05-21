@@ -112,14 +112,11 @@ mark {
 .cs-feature--flip .cs-feature-img { order: 2; }
 .cs-feature--flip .cs-feature-body { order: 1; }
 .cs-feature-img {
-  border-radius: 12px;
-  background: var(--off);
   position: relative;
   overflow: visible;
 }
 .cs-feature-img img {
   width: 100%; display: block;
-  border-radius: 12px;
 }
 
 .cs-feature-body h3 {
@@ -221,4 +218,154 @@ mark {
 .cs-placeholder {
   font-size: 13px; color: var(--ink3);
   font-weight: 500;
+}
+
+/* ── Research Process ── */
+.cs-process {
+  display: flex; flex-direction: column;
+  margin-top: 32px; gap: 0;
+}
+.cs-process-step {
+  display: grid; grid-template-columns: 48px 1fr;
+  gap: 24px; padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+.cs-process-step:last-child { border-bottom: none; }
+.cs-process-num {
+  font-size: 13px; font-weight: 600;
+  color: var(--accent); padding-top: 2px;
+}
+.cs-process-step h3 {
+  font-size: 16px; font-weight: 600;
+  letter-spacing: -.01em; color: var(--ink);
+  margin-bottom: 8px;
+}
+.cs-process-step p {
+  font-size: 14px; font-weight: 300;
+  color: var(--ink2); line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ── Opportunity grid ── */
+.cs-opportunity-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; margin-top: 24px;
+}
+.cs-opportunity {
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px;
+}
+.cs-opportunity h3 {
+  font-size: 14px; font-weight: 600;
+  color: var(--accent); margin-bottom: 12px;
+  letter-spacing: -.01em;
+}
+.cs-opportunity ul {
+  list-style: none; padding: 0;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.cs-opportunity ul li {
+  font-size: 13px; font-weight: 300;
+  color: var(--ink2); line-height: 1.5;
+  padding-left: 12px; position: relative;
+}
+.cs-opportunity ul li::before {
+  content: '–';
+  position: absolute; left: 0;
+  color: var(--ink3);
+}
+
+@media (max-width: 640px) {
+  .cs-opportunity-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Adopted features ── */
+.cs-adopted { margin-top: 48px; }
+.cs-adopted h3 {
+  font-size: 16px; font-weight: 600;
+  letter-spacing: -.01em; color: var(--ink);
+  margin-bottom: 24px;
+}
+.cs-adopted-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.cs-adopted-item { display: flex; flex-direction: column; gap: 16px; }
+.cs-adopted-item p {
+  font-size: 13px; font-weight: 300;
+  color: var(--ink2); line-height: 1.65;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .cs-adopted-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Adopted features Option A ── */
+.cs-adopted-grid-a {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-top: 0;
+}
+.cs-adopted-card { display: flex; flex-direction: column; gap: 12px; }
+.cs-adopted-img {
+  overflow: hidden;
+  background: var(--off); border: 1px solid var(--border);
+}
+.cs-adopted-img img { width: 100%; display: block; }
+.cs-adopted-num {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink3);
+}
+.cs-adopted-card h4 {
+  font-size: 14px; font-weight: 600;
+  letter-spacing: -.01em; color: var(--ink);
+  line-height: 1.4; margin: 0;
+}
+.cs-adopted-card p {
+  font-size: 13px; font-weight: 300;
+  color: var(--ink2); line-height: 1.65; margin: 0;
+}
+
+@media (max-width: 640px) {
+  .cs-adopted-grid-a { grid-template-columns: 1fr; }
+}
+
+/* ── Adopted features rows — limit image height ── */
+.cs-adopted-rows .cs-feature-img img {
+  max-height: 400px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.cs-adopted-rows .cs-feature-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--off);
+}
+.cs-adopted-num {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink3); display: block; margin-bottom: 10px;
+}
+.cs-adopted-rows .cs-feature-body h4 {
+  font-size: 18px; font-weight: 600;
+  letter-spacing: -.01em; color: var(--ink);
+  margin-bottom: 12px; line-height: 1.2;
+}
+
+/* ── User quotes ── */
+.cs-quotes {
+  margin-top: 40px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.cs-quote {
+  font-size: 15px; font-weight: 300;
+  color: var(--ink2); line-height: 1.7;
+  font-style: italic;
+  border-left: 3px solid var(--accent);
+  padding-left: 20px; margin: 0;
 }

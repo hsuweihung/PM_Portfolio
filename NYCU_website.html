@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8754TWSEBE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8754TWSEBE');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYCU Website Redesign — William Hsu | UX Design Case Study</title>
+  <meta name="description" content="Case study: William Hsu led UX design for NYCU's Cultivation Plan website — information architecture, card sorting, wireframes, and usability testing. SUS 75.4.">
+  <meta name="author" content="William Hsu">
+  <link rel="canonical" href="https://williamhsu.design/NYCU_website.html">
+  <meta property="og:title" content="NYCU Website Redesign — William Hsu">
+  <meta property="og:description" content="UX Case Study: End-to-end redesign of NYCU's public platform — SUS 75.4, improved IA, and validated usability improvements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/case-study.css">
+  <link rel="icon" href="./image/me.png" type="image/x-icon">
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <nav id="nav" role="navigation" aria-label="Primary navigation">
+    <div class="pill">
+      <a href="./index.html" class="pill-logo" aria-label="William Hsu — home">
+        <img src="./image/me.png" alt="William Hsu" class="pill-avatar">
+        <span class="pill-name">William Hsu</span>
+      </a>
+      <div class="pill-divider" aria-hidden="true"></div>
+      <div class="pill-links">
+        <a href="./index.html" class="pill-link pill-link--active">Work</a>
+        <a href="./about.html" class="pill-link">About</a>
+        <a href="./williamHsu_resume.pdf" target="_blank" rel="noopener" class="pill-link">Resume</a>
+        <a href="mailto:william19970923@gmail.com" class="pill-cta">Contact</a>
+      </div>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mob-menu" id="mobMenu" hidden>
+    <button type="button" class="mob-close" id="mobClose" aria-label="Close menu">
+      <span></span><span></span>
+    </button>
+    <nav class="mob-nav" aria-label="Mobile navigation">
+      <a href="./index.html" class="mob-link" data-num="01">Work</a>
+      <a href="./about.html" class="mob-link" data-num="02">About</a>
+      <a href="./williamHsu_resume.pdf" target="_blank" rel="noopener" class="mob-link" data-num="03">Resume</a>
+      <a href="mailto:william19970923@gmail.com" class="mob-link" data-num="04">Contact</a>
+    </nav>
+    <div class="mob-footer">
+      <span>William Hsu</span>
+      <a href="https://www.linkedin.com/in/williamhsuu/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <h1 class="sr-only">NYCU Website Redesign — UX Design Case Study</h1>
+
+    <!-- Hero -->
+    <section class="cs-hero">
+      <div class="cs-hero-inner">
+        <div class="cs-hero-meta">
+          <span class="cs-tag">Academic Project</span>
+          <span class="cs-tag">UX Design</span>
+          <span class="cs-tag">RWD</span>
+        </div>
+        <h2 class="cs-hero-title">NYCU Website<br>Redesign</h2>
+        <p class="cs-hero-sub">Redesigning the Cultivation Plan platform to make university research accessible and engaging</p>
+      </div>
+      <div class="cs-hero-img">
+        <img src="./image/project_3_title.png" alt="NYCU Website Redesign" loading="eager">
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="cs-overview">
+      <div class="cs-overview-inner">
+        <div class="cs-overview-item">
+          <span class="cs-overview-label">Timeline</span>
+          <span class="cs-overview-val">Mar – Jul 2022 · Launched Jun 2023</span>
+        </div>
+        <div class="cs-overview-item">
+          <span class="cs-overview-label">My Role</span>
+          <span class="cs-overview-val">UX Lead — IA, Wireframe, Stakeholder Communication</span>
+        </div>
+        <div class="cs-overview-item">
+          <span class="cs-overview-label">Team</span>
+          <span class="cs-overview-val">10 members · 2 PM, 2 UX, 1 UI, 1 Visual, 1 F2E, 3 Copywriters</span>
+        </div>
+        <div class="cs-overview-item cs-overview-item--accent">
+          <span class="cs-overview-label">Outcome</span>
+          <span class="cs-overview-val">SUS 75.4 · User satisfaction 4/5 · 3 goals achieved</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="cs-body">
+
+      <!-- Background -->
+      <section class="cs-section">
+        <h2 class="cs-section-title">Background</h2>
+        <p>NYCU's "Cultivation Plan" website was created to showcase the university's research directions and future plans to external audiences — primarily industry alumni and prospective students. The first version launched in 2021, but user feedback and internal review revealed significant usability issues that were reducing engagement and making it harder for users to find relevant information.</p>
+        <p>In 2022, the Communication and Outreach Office commissioned a full redesign. The primary challenge was information volume: the first version contained a large amount of content that was costly to migrate in full. This required clear prioritization — identifying what information was critical to surface directly, and what could be expressed more efficiently through visual design rather than text.</p>
+      </section>
+
+      <!-- My Role -->
+      <section class="cs-section">
+        <h2 class="cs-section-title">My Role</h2>
+        <p>Led all UX design work on a cross-functional team of 10 — owning information architecture, wireframes, and mockup review. Bridged communication between the design team, front-end engineers, and stakeholders to align on requirements and keep the project moving.</p>
+      </section>
+
+      <!-- Problem Statement -->
+      <section class="cs-section">
+        <h2 class="cs-section-title">Problem Statement</h2>
+        <p>We conducted usability testing on the first version with 4 target users and identified three core issues:</p>
+        <div class="cs-process">
+          <div class="cs-process-step">
+            <span class="cs-process-num">01</span>
+            <div>
+              <h3>Complex information architecture</h3>
+              <p>Category titles were unclear, making it difficult for users to determine where their desired information was located. Research content — which users considered most important — required multiple steps to access.</p>
+            </div>
+          </div>
+          <div class="cs-process-step">
+            <span class="cs-process-num">02</span>
+            <div>
+              <h3>Interaction design not aligned with user habits</h3>
+              <p>Significant differences from typical informational websites created a learning curve, reducing browsing efficiency for first-time visitors.</p>
+            </div>
+          </div>
+          <div class="cs-process-step">
+            <span class="cs-process-num">03</span>
+            <div>
+              <h3>Content presentation reduced browsing motivation</h3>
+              <p>Research content required additional file downloads to view. Information appeared disorganized and lengthy, discouraging users from reading further.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design Process -->
+      <section class="cs-section">
+        <h2 class="cs-section-title">Design Process</h2>
+
+        <!-- Card Sorting -->
+        <div class="cs-feature">
+          <div class="cs-feature-img">
+            <img src="./image/一樹百穫/IA_Workshop.png" alt="Card sorting workshop" loading="lazy">
+          </div>
+          <div class="cs-feature-body">
+            <h3>Information Architecture — Card Sorting Workshop</h3>
+            <p>After reviewing the first version's content, I identified that category titles lacked clarity and didn't convey the scope of information they covered. I led an internal workshop to redesign the IA from scratch — collaboratively creating a new sitemap and determining page title names through structured card sorting exercises.</p>
+          </div>
+        </div>
+
+        <!-- Wireframe -->
+        <div class="cs-feature cs-feature--flip">
+          <div class="cs-feature-img">
+            <img src="./image/一樹百穫/WF.png" alt="Wireframe development" loading="lazy">
+          </div>
+          <div class="cs-feature-body">
+            <h3>Wireframe — Component-First Approach</h3>
+            <p>Given the large volume of data and content variation across pages, I began by reviewing all copy content, then created adaptable components that could accommodate different data scenarios — prioritizing budget efficiency without compromising flexibility. Development followed a Scrum-like approach across 4 stages aligned with the sitemap structure, handing off each completed stage to the UI designer before moving to the next.</p>
+          </div>
+        </div>
+
+        <!-- Heuristic Evaluation -->
+        <div class="cs-feature">
+          <div class="cs-feature-img">
+            <img src="./image/一樹百穫/啟發式.png" alt="Heuristic evaluation" loading="lazy">
+          </div>
+          <div class="cs-feature-body">
+            <h3>Heuristic Evaluation</h3>
+            <p>Using Nielsen's 10 usability heuristics on high-fidelity prototypes across iOS, Android, macOS, and Windows devices, we identified 2 priority issues: inconsistency in image display before and after interaction, and missing clickable links in laboratory descriptions. Both were resolved before proceeding to usability testing.</p>
+          </div>
+        </div>
+
+        <!-- Usability Testing -->
+        <div class="cs-feature cs-feature--flip">
+          <div class="cs-feature-img">
+            <img src="./image/project_3_title.png" alt="Usability testing results" loading="lazy">
+          </div>
+          <div class="cs-feature-body">
+            <h3>Usability Testing</h3>
+            <p>Recruited 4 students and 4 alumni for usability testing on the redesigned site. Issues were prioritized into three levels — high, medium, and low — with high and medium priority items addressed before launch. Results confirmed improved navigation efficiency and content discoverability across both user groups.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Result -->
+      <section class="cs-section cs-section--accent">
+        <h2 class="cs-section-title">Result</h2>
+        <div class="cs-metrics">
+          <div class="cs-metric">
+            <span class="cs-metric-num">75.4</span>
+            <span class="cs-metric-label">SUS score (PR ~74) — improved usability over first version</span>
+          </div>
+          <div class="cs-metric">
+            <span class="cs-metric-num">4 / 5</span>
+            <span class="cs-metric-label">User satisfaction score — users found content richer and easier to navigate</span>
+          </div>
+        </div>
+
+        <div class="cs-quotes">
+          <blockquote class="cs-quote">"The new version's structure is consistent, making it easy for me to quickly find what I need, even if I'm not familiar with the categories."</blockquote>
+          <blockquote class="cs-quote">"The new version is a lot easier to use. The categories are clearer, making it more user-friendly."</blockquote>
+        </div>
+      </section>
+
+      <!-- Self-Reflection -->
+      <section class="cs-section">
+        <h2 class="cs-section-title">Self-Reflection</h2>
+        <div class="cs-reflection">
+          <div class="cs-reflection-item">
+            <span class="cs-reflection-num">01</span>
+            <div>
+              <h3>Filtering requirements for smoother execution</h3>
+              <p>With numerous stakeholders, internal meetings often generated many new ideas that risked scope creep. I developed a habit of filtering requirements against the original project goals in real time — and when certain features weren't feasible within timeline or budget, I learned to present the technical reasoning clearly to stakeholders rather than simply saying no.</p>
+            </div>
+          </div>
+          <div class="cs-reflection-item">
+            <span class="cs-reflection-num">02</span>
+            <div>
+              <h3>Planning under a tight timeline</h3>
+              <p>With a large number of pages to design and a tight schedule, I listed all pages first, prioritized by urgency, and reviewed content complexity with the team before estimating workdays. This collaborative planning approach kept the project on track without sacrificing design quality.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Project navigation -->
+    <div class="cs-nav">
+      <a href="./yahoo_app.html" class="cs-nav-link">← Yahoo App</a>
+      <a href="./Rockpanda.html" class="cs-nav-link">Rock Panda →</a>
+    </div>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <a href="./index.html" class="footer-back">← Back to all work</a>
+      <nav aria-label="Footer links">
+        <a href="https://www.linkedin.com/in/williamhsuu/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button type="button" id="btt" aria-label="Back to top">↑</button>
+  <script src="./JS/main.js"></script>
+</body>
+</html>
