@@ -158,7 +158,7 @@ mark {
 /* Project nav */
 .cs-nav {
   max-width: var(--max); margin: 0 auto;
-  padding: 40px 32px;
+  padding: 40px 32px 80px;
   display: flex; justify-content: space-between;
   border-top: 1px solid var(--border);
 }
@@ -368,4 +368,24 @@ mark {
   font-style: italic;
   border-left: 3px solid var(--accent);
   padding-left: 20px; margin: 0;
+}
+
+/* ── PDF embed ── */
+.cs-pdf-wrap {
+  width: 100%;
+  border: 1px solid var(--border);
+}
+.cs-pdf-wrap object {
+  display: block;
+}
+
+/* ── Video embed ── */
+.cs-video-wrap {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.cs-video-wrap iframe {
+  width: 100%; height: 100%;
+  display: block;
 }
